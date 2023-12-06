@@ -1,0 +1,58 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="post">
+        <center><p style="font-family: 'Calibri', sans-serif; font-size: 18px; font-weight: bold; color: #333;">User Registration</p></center>
+        {% csrf_token %}
+        <label>Firstname</label>
+            {{ form.first_name }}
+        <br>
+        <label>Lastname</label>
+            {{ form.last_name }}
+        <br>
+        <label>Gender</label>
+            {{ form.gender }}
+        <br>
+        <label>Email</label>
+            {{ form.email }}
+        <br>
+        <br>
+        <center> <button type="submit">Submit</button> </center>
+    </form>
+</body>
+</html>
+<!--
+{{ form.as_p }}-->
